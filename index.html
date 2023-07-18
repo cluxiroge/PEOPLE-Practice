@@ -4,13 +4,33 @@
         <title>Serena's Amazing Website</title>
         <link rel="stylesheet" href="style.css">
         <script src="script.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
 
     <body>
+        <script>
+            var countDownDate = new Date("Jul 27, 2023 21:00:00").getTime();
+            var x = setInterval(function() {
+              var now = new Date().getTime();
+              var distance = countDownDate - now;
+              var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+              var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+              var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+              var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+              document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+              + minutes + "m " + seconds + "s ";
+              if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "EXPIRED";
+              }
+            }, 1000);
+            </script>
        <span style="font-family:Courier New">
         <center>
-            <h1> Welcome to Serena's Amazing Website</h1>
-            <!-- hjh <button id="changeButton" onclick="changeColor()">BIG BUTTON</button>-->
+            <h1> People Blog!</h1>
+            <h2>How many </h2>
+            <p id="demo"style="font-family:Courier"></p>
+            <!-- <button id="changeButton" onclick="changeColor()">BIG BUTTON</button>-->
             <h2> Sunday 07/09 - First day on campus! </h2>
             <img src="biscuit.jpg" alt="Miguel's Biscuit"style="width:400px;height:711.11px;">
             <h2>Monday 07/10 - Time to get started!</h2>
