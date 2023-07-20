@@ -9,27 +9,65 @@
 
     <body>
         <script>
-            var countDownDate = new Date("Jul 27, 2023 21:00:00").getTime();
+            var countDownDate1 = new Date("Jul 27, 2023 21:00:00").getTime();
             var x = setInterval(function() {
               var now = new Date().getTime();
-              var distance = countDownDate - now;
+              var distance = countDownDate1 - now;
               var days = Math.floor(distance / (1000 * 60 * 60 * 24));
               var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
               var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
               var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-              document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+              document.getElementById("leaving").innerHTML = days + "d " + hours + "h "
               + minutes + "m " + seconds + "s ";
               if (distance < 0) {
                 clearInterval(x);
-                document.getElementById("demo").innerHTML = "I'M FREE! FREE AT LAST!";
+                document.getElementById("leaving").innerHTML = "I'M FREE! FREE AT LAST!";
               }
             }, 1000);
-            </script>
+        </script>
+        <script>
+            var countDownDate2 = new Date("Jul 23, 2023 09:00:00").getTime();
+            var x = setInterval(function() {
+              var now = new Date().getTime();
+              var distance = countDownDate2 - now;
+              var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+              var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+              var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+              var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+              document.getElementById("brunch").innerHTML = days + "d " + hours + "h "
+              + minutes + "m " + seconds + "s ";
+              if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("brunch").innerHTML = "A GOOD MEAL!!! AT LAST!!!";
+              }
+            }, 1000);
+        </script>
+        <script>
+            var countDownDate3 = new Date("Jul 23, 2023 13:00:00").getTime();
+            var x = setInterval(function() {
+              var now = new Date().getTime();
+              var distance = countDownDate3 - now;
+              var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+              var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+              var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+              var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+              document.getElementById("oppenheimer").innerHTML = days + "d " + hours + "h "
+              + minutes + "m " + seconds + "s ";
+              if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("oppenheimer").innerHTML = "WOW THIS MOVIE IS GREAT";
+              }
+            }, 1000);
+        </script>
        <span style="font-family:Courier New">
         <center>
             <h1> PEOPLE Summer University IV Blog!</h1>
             <h2>How long do I have until I'm free? Only:</h2>
-            <p id="demo"style="font-family:Courier"></p>
+            <p id="leaving"style="font-family:Courier"></p>
+            <h2>How long until I get picked up to have a good meal?</h2>
+            <p id="brunch"style="font-family:Courier"></p>
+            <h2>How long until Oppenheimer?</h2>
+            <p id="oppenheimer"style="font-family:Courier"></p>
             <hr>
             <h2> Sunday 07/09 - First day on campus! </h2>
             <img src="biscuit.jpg" alt="Miguel's Biscuit"style="width:400px;height:711.11px;">
